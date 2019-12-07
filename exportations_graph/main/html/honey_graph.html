@@ -98,6 +98,10 @@ If you want more information, please check their wiki: https://github.com/humang
     </div>
 </div>
 
+<div class="slidecontainer">
+    <input type="range" min="0" max="2" value="1" class="slider" id="myRange">
+    <p>Value: <span id="demo"></span></p>
+</div>
 
 <script type="text/javascript" src="../../dist/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="../../dist/js/leaflet.js"></script>
@@ -109,6 +113,9 @@ If you want more information, please check their wiki: https://github.com/humang
 
 <script type="text/javascript">
 
+    var slider = document.getElementById("myRange");
+    var years = [1995, 2005, 2017];
+    var year = years[slider.value];
 
     /* Create the map*/
     $(document).ready(function () {
@@ -135,7 +142,7 @@ If you want more information, please check their wiki: https://github.com/humang
 
         /* Initialize the map by setting the map origin on the NAL*/
         map = L.map('map', {
-            minZoom: 2, maxBounds: bounds, maxZoom: 13
+            minZoom: 3, maxBounds: bounds, maxZoom: 8
         }).setView([46.518516, 6.561727], 4);
 
 
@@ -194,8 +201,9 @@ If you want more information, please check their wiki: https://github.com/humang
 
 
         function style(feature) {
+
             return {
-                fillColor: getColor(feature.value),
+                fillColor: getColor(feature.value[year.toString()]),
                 weight: 2,
                 opacity: 1,
                 dashArray: '3',
@@ -344,19 +352,39 @@ If you want more information, please check their wiki: https://github.com/humang
 
         legendControl.addTo(map);
 
-
         // add the graph to the map
         var allLayer = new L.Graph(exportations, options);
         map.addLayer(allLayer);
 
+        country_layer = L.geoJson(countries, {
+            style: style,
+            onEachFeature: onEachFeature
+        });
+        country_layer.addTo(map);
+
+
+        var country_name = null;
+
+
+        slider.oninput = function() {
+            year = years[this.value];
+            allLayer.options.includeLayer = function (newRecord) {
+                return newRecord.from === country_name && newRecord.Year == year;
+            };
+            allLayer.reloadData();
+            country_layer.setStyle(style)
+        }
+
 
         function links_creation(e) {
             var layer = e.target;
-
+            country_name = layer.feature.properties.name;
             allLayer.options.includeLayer = function (newRecord) {
-                return newRecord.from === layer.feature.properties.name;
+                return newRecord.from === country_name && newRecord.Year == year;
             };
             allLayer.reloadData();
+
+
         }
 
         function onEachFeature(feature, layer) {
@@ -367,10 +395,7 @@ If you want more information, please check their wiki: https://github.com/humang
             });
         }
 
-        L.geoJson(countries, {
-            style: style,
-            onEachFeature: onEachFeature
-        }).addTo(map);
+
 
 
 
