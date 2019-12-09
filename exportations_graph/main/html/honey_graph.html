@@ -12,7 +12,7 @@ If you want more information, please check their wiki: https://github.com/humang
 
 
     <!--  -->
-    <link href="../../dist/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- <link href="../../dist/lib/bootstrap/css/bootstrap.css" rel="stylesheet"> -->
     <style>
 
         /* Add Background pattern on the map */
@@ -283,7 +283,38 @@ If you want more information, please check their wiki: https://github.com/humang
         minCount;
 
 
-        var colorFunction = new L.CustomColorFunction(1, 35000, L.ColorBrewer.Qualitative.Paired['6']);
+        function getArrowColor(d) {
+            return d > 10000 ? '#001969' :
+                    d > 1000  ? '#364286' :
+                        d > 100  ? '#586da3' :
+                            d > 10   ? '#789bc1' :
+                                d > 1   ? '#97cce0' :
+                                    d > 0   ? '#b7ffff' :
+                                        '#105f40';
+        }
+
+
+        var legend = L.control({position: 'bottomright'});
+
+        legend.onAdd = function (map) {
+
+            var div = L.DomUtil.create('div', 'info legend'),
+                grades = [0, 1, 10, 100, 1000, 10000],
+                labels = [];
+            div.innerHTML = '<center><h4>Exportation <br>of honey<br> in tonnes</h4></center>';
+            // loop through our density intervals and generate a label with a colored square for each interval
+            for (var i = 0; i < grades.length; i++) {
+                div.innerHTML +=
+                    '<i style="background:' + getArrowColor(grades[i] + 1) + '"></i> ' +
+                    grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+            }
+
+            return div;
+        };
+
+        legend.addTo(map);
+
+
 
         /* Handle the graphical options of the graph */
         var options = {
@@ -338,8 +369,8 @@ If you want more information, please check their wiki: https://github.com/humang
             },
             displayOptions: {
                 "Value" : {
-                    weight: 2,
-                    color: colorFunction,
+                    weight: 3,
+                    color: getArrowColor,
                 displayName: 'Exportations in tonnes (for arrows):'
             }},
             onEachRecord: function (layer, record) {
@@ -347,9 +378,9 @@ If you want more information, please check their wiki: https://github.com/humang
             }
         };
 
-        legendControl = new L.Control.Legend();
+        //LegendControl = new L.Control.Legend();
 
-        legendControl.addTo(map);
+        //legendControl.addTo(map);
 
         // add the graph to the map
         var allLayer = new L.Graph(exportations, options);
