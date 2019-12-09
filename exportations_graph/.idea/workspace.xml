@@ -1,246 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5db41abf-f42c-4e0b-a8e2-7e152d28d6e1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
-    <ignored path="$PROJECT_DIR$/.tmp/" />
-    <ignored path="$PROJECT_DIR$/temp/" />
-    <ignored path="$PROJECT_DIR$/tmp/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="5db41abf-f42c-4e0b-a8e2-7e152d28d6e1" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="533634851">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="5" />
-          <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="5" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="LICENSE" value="1" />
-          <entry key="css" value="8" />
-          <entry key="gpx" value="1" />
-          <entry key="html" value="9" />
-          <entry key="iml" value="1" />
-          <entry key="js" value="15" />
-          <entry key="json" value="3" />
-          <entry key="md" value="2" />
-          <entry key="png" value="7" />
-          <entry key="sh" value="1" />
-          <entry key="xml" value="4" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CSS" value="8" />
-          <entry key="HTML" value="9" />
-          <entry key="IDEA_MODULE" value="1" />
-          <entry key="Image" value="7" />
-          <entry key="JSON" value="3" />
-          <entry key="JavaScript" value="15" />
-          <entry key="PLAIN_TEXT" value="5" />
-          <entry key="XML" value="4" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="css" value="16" />
-          <entry key="html" value="776" />
-          <entry key="js" value="429" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="CSS" value="16" />
-          <entry key="HTML" value="776" />
-          <entry key="JavaScript" value="429" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="-282489701">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="16" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.11" value="2" />
-          <entry key="project.open.time.13" value="3" />
-          <entry key="project.open.time.14" value="2" />
-          <entry key="project.open.time.16" value="1" />
-          <entry key="project.open.time.2" value="2" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.5" value="2" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="16" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="css" value="506" />
-          <entry key="html" value="2352" />
-          <entry key="js" value="99" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="CSS" value="506" />
-          <entry key="HTML" value="2352" />
-          <entry key="JavaScript" value="99" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="css" value="5" />
-          <entry key="html" value="7" />
-          <entry key="jpg" value="1" />
-          <entry key="js" value="20" />
-          <entry key="png" value="5" />
-          <entry key="xml" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CSS" value="5" />
-          <entry key="HTML" value="7" />
-          <entry key="Image" value="6" />
-          <entry key="JavaScript" value="20" />
-          <entry key="XML" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="-1406148223">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="html" value="2" />
-          <entry key="ipynb" value="1" />
-          <entry key="js" value="3" />
-          <entry key="json" value="4" />
-          <entry key="png" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="HTML" value="2" />
-          <entry key="Image" value="1" />
-          <entry key="JSON" value="4" />
-          <entry key="JavaScript" value="3" />
-          <entry key="PLAIN_TEXT" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="html" value="935" />
-          <entry key="js" value="1" />
-          <entry key="json" value="19" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="HTML" value="935" />
-          <entry key="JSON" value="19" />
-          <entry key="JavaScript" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="-1285306361">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="css" value="1" />
-          <entry key="html" value="1" />
-          <entry key="js" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CSS" value="1" />
-          <entry key="HTML" value="1" />
-          <entry key="JavaScript" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="css" value="21" />
-          <entry key="html" value="498" />
-          <entry key="js" value="30" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="CSS" value="21" />
-          <entry key="HTML" value="498" />
-          <entry key="JavaScript" value="30" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main/html/honey_graph.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="499">
-              <caret line="144" column="53" selection-start-line="144" selection-start-column="53" selection-end-line="144" selection-end-column="53" />
-              <folding>
-                <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-                <element signature="e#0#7#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/data/countries.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret column="4490" selection-start-column="4490" selection-end-column="4490" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dist/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/html/test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="915">
-              <caret line="61" selection-start-line="61" selection-end-line="61" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -251,135 +16,19 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>allLayer</find>
-      <find>options</find>
-      <find>layerControl</find>
-      <find>grou</find>
-      <find>groupLookup</find>
-      <find>node</find>
-      <find>exa</find>
-      <find>dis</find>
-      <find>http</find>
-      <find>my we</find>
-      <find>logo</find>
-      <find>img</find>
-      <find>center</find>
-      <find>para</find>
-      <find>bounce</find>
-      <find>contai</find>
-      <find>a</find>
-      <find>dat</find>
-      <find>loca</find>
-      <find>US P</find>
-      <find>contr</find>
-      <find>links:cre</find>
-      <find>count</find>
-      <find>countries</find>
-      <find>getCol</find>
-      <find>year</find>
-      <find>style</find>
-      <find>name</find>
-      <find>valu</find>
-      <find>log</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/examples/html/minard2.html" />
-        <option value="$PROJECT_DIR$/examples/data/flightData.js" />
-        <option value="$PROJECT_DIR$/examples/data/usAirports.js" />
-        <option value="$PROJECT_DIR$/examples/html/airports.html" />
-        <option value="$PROJECT_DIR$/examples/data/vertices.js" />
-        <option value="$PROJECT_DIR$/examples/data/edges.js" />
-        <option value="$PROJECT_DIR$/dist/MarkerCluster.js" />
-        <option value="$PROJECT_DIR$/dist/css/MasterCluster.Default.css" />
-        <option value="$PROJECT_DIR$/dist/css/MarkerCluster.css" />
-        <option value="$PROJECT_DIR$/examples/data/verticesDumb.js" />
-        <option value="$PROJECT_DIR$/examples/data/pathsDumb.js" />
-        <option value="$PROJECT_DIR$/examples/data/edgesDumb.js" />
-        <option value="$PROJECT_DIR$/examples/css/example.css" />
-        <option value="$PROJECT_DIR$/examples/css/style.css" />
-        <option value="$PROJECT_DIR$/examples/html/neutGraph.html" />
-        <option value="$PROJECT_DIR$/NeutGraph.html" />
-        <option value="$PROJECT_DIR$/dist/css/leaflet.css" />
-        <option value="$PROJECT_DIR$/dist/css/font-awesome.css" />
-        <option value="$PROJECT_DIR$/dist/js/tile.stamen.js" />
-        <option value="$PROJECT_DIR$/main/html/index.html" />
-        <option value="$PROJECT_DIR$/website.html" />
-        <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/index2.html" />
-        <option value="$PROJECT_DIR$/dist/css/arrow.js" />
-        <option value="$PROJECT_DIR$/dist/css/arrow.css" />
-        <option value="$PROJECT_DIR$/test.html" />
-        <option value="$PROJECT_DIR$/dist/js/smoothscroll.js" />
-        <option value="$PROJECT_DIR$/dist/js/leaflet.markercluster.js" />
-        <option value="$PROJECT_DIR$/dist/js/leaflet.js" />
-        <option value="$PROJECT_DIR$/dist/js/jquery-1.9.1.min.js" />
-        <option value="$PROJECT_DIR$/dist/js/jquery.min.js" />
-        <option value="$PROJECT_DIR$/dist/css/sitestyle.css" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/main/data/countries.geo.json" />
-        <option value="$PROJECT_DIR$/main/data/capitals.json" />
-        <option value="$PROJECT_DIR$/main/html/NeutGraph.html" />
-        <option value="$PROJECT_DIR$/main/html/test.html" />
-        <option value="$PROJECT_DIR$/dist/css/style.css" />
-        <option value="$PROJECT_DIR$/main/data/countries.js" />
-        <option value="$PROJECT_DIR$/main/html/honey_graph.html" />
-      </list>
-    </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="1274" />
     <option name="height" value="1440" />
   </component>
+  <component name="ProjectId" id="1UkJD5Dt1IfS60LWSCUQ20tzs5v" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="exportations_graph" type="b2602c69:ProjectViewProjectNode" />
-              <item name="exportations_graph" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="exportations_graph" type="b2602c69:ProjectViewProjectNode" />
-              <item name="exportations_graph" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="exportations_graph" type="b2602c69:ProjectViewProjectNode" />
-              <item name="exportations_graph" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="exportations_graph" type="b2602c69:ProjectViewProjectNode" />
-              <item name="exportations_graph" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -399,28 +48,16 @@
       <recent name="$PROJECT_DIR$/main/html" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected="JavaScript Debug.website.html">
-    <configuration name="website.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/GraphVisualization/website.html">
+    <configuration name="website.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/GraphVisualization/website.html">
       <method v="2" />
     </configuration>
-    <configuration name="MarkerCluster.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="MarkerCluster.js" working-dir="$PROJECT_DIR$/dist">
+    <configuration name="MarkerCluster.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="MarkerCluster.js" working-dir="$PROJECT_DIR$/dist">
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Node.js.MarkerCluster.js" />
       <item itemvalue="JavaScript Debug.website.html" />
+      <item itemvalue="Node.js.MarkerCluster.js" />
     </list>
     <recent_temporary>
       <list>
@@ -428,6 +65,18 @@
         <item itemvalue="Node.js.MarkerCluster.js" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -462,11 +111,9 @@
       <workItem from="1573919140610" duration="14952000" />
       <workItem from="1573983232100" duration="1686000" />
       <workItem from="1575719598767" duration="7329000" />
+      <workItem from="1575894546133" duration="2845000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85417000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -477,203 +124,7 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32611263" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49970222" weight="0.32846716" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49960095" weight="0.329927" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49880287" weight="0.32891566" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49493745" weight="0.310219" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5050625" side_tool="true" weight="0.32919708" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2635659" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32919708" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49960095" weight="0.329927" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49880287" weight="0.329927" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49400985" visible="true" weight="0.32891566" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50599015" side_tool="true" visible="true" weight="0.32891566" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout-to-restore>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bower.json" />
-    <entry file="file://$PROJECT_DIR$/Gruntfile.js" />
-    <entry file="file://$PROJECT_DIR$/package-lock.json" />
-    <entry file="file://$PROJECT_DIR$/package.json" />
-    <entry file="file://$PROJECT_DIR$/README.md" />
-    <entry file="file://$PROJECT_DIR$/examples/lib/jsts/javascript.util.js" />
-    <entry file="file://$PROJECT_DIR$/examples/css/ui.css" />
-    <entry file="file://$PROJECT_DIR$/examples/.idea/misc.xml" />
-    <entry file="file://$PROJECT_DIR$/examples/.idea/modules.xml" />
-    <entry file="file://$PROJECT_DIR$/examples/.idea/workspace.xml" />
-    <entry file="file://$PROJECT_DIR$/examples/.idea/examples.iml" />
-    <entry file="file://$PROJECT_DIR$/dist/lib/leaflet/images/layers.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/lib/leaflet/images/marker-icon.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/lib/leaflet/images/marker-icon@2x.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/lib/leaflet/images/marker-shadow.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/html/style.css" />
-    <entry file="file://$PROJECT_DIR$/examples/html/neutGraph.html" />
-    <entry file="file://$PROJECT_DIR$/dist/css/font-awesome.css" />
-    <entry file="file://$PROJECT_DIR$/dist/css/leaflet.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2824">
-          <caret line="460" column="17" selection-start-line="460" selection-start-column="17" selection-end-line="460" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/routerinfo.png" />
-    <entry file="file://$PROJECT_DIR$/images/paths.png" />
-    <entry file="file://$PROJECT_DIR$/dist/css/arrow.js" />
-    <entry file="file://$PROJECT_DIR$/dist/css/arrow.css" />
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/cluster.png" />
-    <entry file="file://$PROJECT_DIR$/images/arrow.jpg" />
-    <entry file="file://$PROJECT_DIR$/images/arrow.png" />
-    <entry file="file://$PROJECT_DIR$/website.html" />
-    <entry file="file://$PROJECT_DIR$/images/Logo_EPFL.png" />
-    <entry file="file://$PROJECT_DIR$/index3.html" />
-    <entry file="file://$PROJECT_DIR$/dist/js/jquery-1.9.1.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39795">
-          <caret line="2655" column="58" selection-start-line="2655" selection-start-column="58" selection-end-line="2655" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/js/leaflet.markercluster.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7605">
-          <caret line="511" column="20" selection-start-line="511" selection-start-column="20" selection-end-line="511" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.html" />
-    <entry file="file://$PROJECT_DIR$/dist/js/tile.stamen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4395">
-          <caret line="293" selection-start-line="293" selection-end-line="293" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/js/leaflet.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44445">
-          <caret line="2967" column="20" selection-start-line="2967" selection-start-column="20" selection-end-line="2967" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/css/sitestyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2250">
-          <caret line="150" column="20" selection-start-line="150" selection-start-column="20" selection-end-line="150" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/js/smoothscroll.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/js/jquery.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="868">
-          <caret line="2944" column="59" selection-start-line="2944" selection-start-column="59" selection-end-line="2944" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/data/vertices.js" />
-    <entry file="file://$PROJECT_DIR$/main/data/capitals.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/data/background_img.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/data/countries.geo.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/data/edges.js" />
-    <entry file="file://$PROJECT_DIR$/main/data/exportations.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/data/FakeData/template.json" />
-    <entry file="file://$PROJECT_DIR$/main/data/.ipynb_checkpoints/graph_creation-checkpoint.ipynb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-396" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html" />
-    <entry file="file://$PROJECT_DIR$/main/html/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="61" selection-start-line="61" selection-end-line="61" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/data/countries.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret column="4490" selection-start-column="4490" selection-end-column="4490" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/html/honey_graph.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="144" column="53" selection-start-line="144" selection-start-column="53" selection-end-line="144" selection-end-column="53" />
-          <folding>
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="e#0#7#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

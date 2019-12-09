@@ -95,13 +95,11 @@ If you want more information, please check their wiki: https://github.com/humang
 <div class="container-fluid">
     <div class="row-fluid">
         <div id="map"></div>
+        <input type="range" min="0" max="2" value="1" class="slider" id="myRange">
     </div>
 </div>
 
-<div class="slidecontainer">
-    <input type="range" min="0" max="2" value="1" class="slider" id="myRange">
-    <p>Value: <span id="demo"></span></p>
-</div>
+
 
 <script type="text/javascript" src="../../dist/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="../../dist/js/leaflet.js"></script>
@@ -284,6 +282,9 @@ If you want more information, please check their wiki: https://github.com/humang
         maxCount /= 10;
         minCount;
 
+
+        var colorFunction = new L.CustomColorFunction(1, 35000, L.ColorBrewer.Qualitative.Paired['6']);
+
         /* Handle the graphical options of the graph */
         var options = {
             recordsField: null,
@@ -338,9 +339,7 @@ If you want more information, please check their wiki: https://github.com/humang
             displayOptions: {
                 "Value" : {
                     weight: 2,
-                    color: new L.HSLHueFunction(new L.Point(minCount,0), new L.Point(maxCount,200), {
-                        outputLuminosity: '60%'
-                    }),
+                    color: colorFunction,
                 displayName: 'Exportations in tonnes (for arrows):'
             }},
             onEachRecord: function (layer, record) {
