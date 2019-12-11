@@ -93,13 +93,35 @@ If you want more information, please check their wiki: https://github.com/humang
 <body>
 
 <div class="container-fluid">
+
     <div class="row-fluid">
         <div id="map"></div>
         <input type="range" min="0" max="2" value="1" class="slider" id="myRange">
+        <h2 id="background" name="story"
+                  rows="5" cols="33" class = "years">
+        </h2>
+
+        <h2 id="" name="left"
+            rows="5" cols="33" class = "yearstext">
+        1995
+        </h2>
+
+        </h2>
+
+        <h2 id="center" name="story" align="center"
+            rows="5" cols="33" class = "yearstext">
+            2005
+        </h2>
+
+        <h2 id="story" name="right" align="right"
+            rows="5" cols="33" class = "yearstext">
+            2017 
+        </h2>
+
+
     </div>
+
 </div>
-
-
 
 <script type="text/javascript" src="../../dist/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="../../dist/js/leaflet.js"></script>
@@ -110,10 +132,10 @@ If you want more information, please check their wiki: https://github.com/humang
 <script type="text/javascript" src="../../dist/leaflet-dvf.js"></script>
 
 <script type="text/javascript">
-
     var slider = document.getElementById("myRange");
     var years = [1995, 2005, 2017];
     var year = years[slider.value];
+    var flux = "e";
 
     /* Create the map*/
     $(document).ready(function () {
@@ -155,8 +177,8 @@ If you want more information, please check their wiki: https://github.com/humang
 
 // method that we will use to update the control based on feature properties passed
         info.update = function (props, value) {
-            this._div.innerHTML = '<h4>Exportation of honey</h4>' +  (props ?
-                '<b>' + props.name + '</b><br />' + value + ' tonnes'
+            this._div.innerHTML = '<h4>'+ (flux == "e" ? "Exportation" : "Importation") +' of honey</h4>' +  (props ?
+                '<b>' + props.name + '</b><br />' + value[flux+year.toString()] + ' tonnes'
                 : 'Hover over a country');
         };
 
@@ -175,33 +197,32 @@ If you want more information, please check their wiki: https://github.com/humang
         }
 
 
-        var legend = L.control({position: 'bottomleft'});
+        var legend1 = L.control({position: 'bottomleft'});
 
-        legend.onAdd = function (map) {
+        legend1.onAdd = function (map) {
+            this.div = L.DomUtil.create('div', 'info legend')
+            this.update();
+            return this.div;
+        };
 
-            var div = L.DomUtil.create('div', 'info legend'),
-                grades = [0, 1, 10, 100, 1000, 10000, 100000],
-                labels = [];
-            div.innerHTML = '<center><h4>Exportation <br>of honey<br> in tonnes</h4></center>';
+        legend1.update = function () {
+            var grades = [0, 1, 10, 100, 1000, 10000, 100000];
+            console.log((flux == "e" ? "Exportation" : "Importation"));
+            this.div.innerHTML = '<center><h4>'+(flux == "e" ? "Exportation" : "Importation")+'<br>of honey<br> in tonnes</h4></center>';
             // loop through our density intervals and generate a label with a colored square for each interval
             for (var i = 0; i < grades.length; i++) {
-                div.innerHTML +=
+                this.div.innerHTML +=
                     '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
                     grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
             }
-
-            return div;
         };
 
-        legend.addTo(map);
-
-
-
+        legend1.addTo(map);
 
         function style(feature) {
 
             return {
-                fillColor: getColor(feature.value[year.toString()]),
+                fillColor: getColor(feature.value[flux+year.toString()]),
                 weight: 2,
                 opacity: 1,
                 dashArray: '3',
@@ -251,20 +272,9 @@ If you want more information, please check their wiki: https://github.com/humang
                 text: key,
                 center: latlng
             };
-//
-            //if (vertex) {
-            // //   var latlng = new L.LatLng(Number(vertex.lat), Number(vertex.lon));
-//
-            //    location = {
-            //        location: latlng,
-            //        text: key,
-            //        center: latlng
-            //    };
-            //}
 
             return location;
         };
-
 
         var maxCount = -1;
         var minCount = 100;
@@ -282,7 +292,6 @@ If you want more information, please check their wiki: https://github.com/humang
         maxCount /= 10;
         minCount;
 
-
         function getArrowColor(d) {
             return d > 10000 ? '#001969' :
                     d > 1000  ? '#364286' :
@@ -290,31 +299,77 @@ If you want more information, please check their wiki: https://github.com/humang
                             d > 10   ? '#789bc1' :
                                 d > 1   ? '#97cce0' :
                                     d > 0   ? '#b7ffff' :
-                                        '#105f40';
+                                        '#FFFFFF';
         }
 
+        var legend2 = L.control({position: 'bottomright'});
 
-        var legend = L.control({position: 'bottomright'});
+        legend2.onAdd = function (map) {
+            this.div = L.DomUtil.create('div', 'info legend')
+            this.update();
+            return this.div;
+        };
 
-        legend.onAdd = function (map) {
-
-            var div = L.DomUtil.create('div', 'info legend'),
-                grades = [0, 1, 10, 100, 1000, 10000],
-                labels = [];
-            div.innerHTML = '<center><h4>Exportation <br>of honey<br> in tonnes</h4></center>';
+        legend2.update = function () {
+            var grades = [0, 1, 10, 100, 1000, 10000];
+            console.log((flux == "e" ? "Exportation" : "Importation"));
+            this.div.innerHTML = '<center><h4>'+(flux == "e" ? "Exportation" : "Importation")+'<br>of honey<br> in tonnes</h4></center>';
             // loop through our density intervals and generate a label with a colored square for each interval
             for (var i = 0; i < grades.length; i++) {
-                div.innerHTML +=
+                this.div.innerHTML +=
                     '<i style="background:' + getArrowColor(grades[i] + 1) + '"></i> ' +
                     grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
             }
+        };
+
+        legend2.addTo(map);
+
+        var control = L.control({position: 'topleft'});
+
+        control.onAdd = function (map) {
+
+            function test(x){alert(x)};
+
+            var div = L.DomUtil.create('div', 'info legend');
+            div.innerHTML = '<label class="container"><h4>Exportations</h4>\n' +
+                '    <input type="radio" id = "a" checked="checked" name="radio" onchange="test("2")">\n' +
+                '    <span class="checkmark"></span>\n' +
+                '</label>\n' +
+                '<label class="container"><h4>Importations</h4>\n' +
+                '    <input type="radio" id = "b" name="radio">\n' +
+                '    <span class="checkmark"></span>\n' +
+                '</label>';
 
             return div;
         };
 
-        legend.addTo(map);
+        control.addTo(map);
 
+        document.getElementById("a").addEventListener("click", flux_exp, false);
+        document.getElementById("b").addEventListener("click", flux_imp, false);
 
+        function change_flux(f) {
+            flux = f;
+            allLayer.options.includeLayer = function (newRecord) {
+                console.log(flux)
+                return flux == "e" ? newRecord.from === country_name && newRecord.Year == year : newRecord.to === country_name && newRecord.Year == year;
+            };
+            legend1.update();
+            legend2.update();
+            info.update();
+            allLayer.reloadData();
+            country_layer.setStyle(style)
+        }
+
+        function flux_exp() {
+            change_flux("e");
+            console.log(flux)
+            };
+
+        function flux_imp() {
+            change_flux("i");
+            console.log(flux)
+        }
 
         /* Handle the graphical options of the graph */
         var options = {
@@ -378,10 +433,6 @@ If you want more information, please check their wiki: https://github.com/humang
             }
         };
 
-        //LegendControl = new L.Control.Legend();
-
-        //legendControl.addTo(map);
-
         // add the graph to the map
         var allLayer = new L.Graph(exportations, options);
         map.addLayer(allLayer);
@@ -399,21 +450,20 @@ If you want more information, please check their wiki: https://github.com/humang
         slider.oninput = function() {
             year = years[this.value];
             allLayer.options.includeLayer = function (newRecord) {
-                return newRecord.from === country_name && newRecord.Year == year;
+                console.log(flux)
+                return flux == "e" ? newRecord.from === country_name && newRecord.Year == year : newRecord.to === country_name && newRecord.Year == year;
             };
             allLayer.reloadData();
             country_layer.setStyle(style)
         }
 
-
         function links_creation(e) {
             var layer = e.target;
             country_name = layer.feature.properties.name;
             allLayer.options.includeLayer = function (newRecord) {
-                return newRecord.from === country_name && newRecord.Year == year;
+                return flux == "e" ? newRecord.from === country_name && newRecord.Year == year : newRecord.to === country_name && newRecord.Year == year ;
             };
             allLayer.reloadData();
-
 
         }
 
@@ -424,17 +474,6 @@ If you want more information, please check their wiki: https://github.com/humang
                 click : links_creation
             });
         }
-
-
-
-
-
-
-
-
-
-
-
     });
 </script>
 </body>
