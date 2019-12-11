@@ -140,3 +140,36 @@ div.container-fluid {
 	border-radius: 50%;
 	background: white;
 }
+
+.years {
+	-webkit-appearance: none;
+	position:absolute;
+	width: 24%;
+	height: 30px;
+	border-radius: 5px;
+	background: #d3d3d3;
+	bottom:5%;
+	outline: none;
+	right:25%;
+	left:50%;
+	margin-left:-12%;
+	opacity: 0.7;
+	-webkit-transition: .2s;
+	transition: opacity .2s;
+}
+
+.yearstext {
+	-webkit-appearance: none;
+	position:absolute;
+	width: 24%;
+	height: 30px;
+	border-radius: 5px;
+	bottom:5%;
+	outline: none;
+	right:25%;
+	left:50%;
+	margin-left:-12%;
+	opacity: 0.7;
+	-webkit-transition: .2s;
+
+}

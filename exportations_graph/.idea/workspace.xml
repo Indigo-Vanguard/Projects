@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5db41abf-f42c-4e0b-a8e2-7e152d28d6e1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../bees.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../bees.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bees-Scatterplot.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../bees-Scatterplot.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,6 +110,7 @@
       <workItem from="1573983232100" duration="1686000" />
       <workItem from="1575719598767" duration="7329000" />
       <workItem from="1575894546133" duration="6318000" />
+      <workItem from="1576081271415" duration="2550000" />
     </task>
     <servers />
   </component>

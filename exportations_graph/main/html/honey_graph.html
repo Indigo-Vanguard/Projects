@@ -92,27 +92,36 @@ If you want more information, please check their wiki: https://github.com/humang
 
 <body>
 
-
-
 <div class="container-fluid">
-
-
 
     <div class="row-fluid">
         <div id="map"></div>
         <input type="range" min="0" max="2" value="1" class="slider" id="myRange">
+        <h2 id="background" name="story"
+                  rows="5" cols="33" class = "years">
+        </h2>
+
+        <h2 id="" name="left"
+            rows="5" cols="33" class = "yearstext">
+        1995
+        </h2>
+
+        </h2>
+
+        <h2 id="center" name="story" align="center"
+            rows="5" cols="33" class = "yearstext">
+            2005
+        </h2>
+
+        <h2 id="story" name="right" align="right"
+            rows="5" cols="33" class = "yearstext">
+            2017 
+        </h2>
+
+
     </div>
 
-
-
-
 </div>
-
-
-
-
-
-
 
 <script type="text/javascript" src="../../dist/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="../../dist/js/leaflet.js"></script>
@@ -209,9 +218,6 @@ If you want more information, please check their wiki: https://github.com/humang
         };
 
         legend1.addTo(map);
-
-
-
 
         function style(feature) {
 
@@ -318,12 +324,9 @@ If you want more information, please check their wiki: https://github.com/humang
 
         legend2.addTo(map);
 
-
         var control = L.control({position: 'topleft'});
 
         control.onAdd = function (map) {
-
-
 
             function test(x){alert(x)};
 
@@ -336,11 +339,6 @@ If you want more information, please check their wiki: https://github.com/humang
                 '    <input type="radio" id = "b" name="radio">\n' +
                 '    <span class="checkmark"></span>\n' +
                 '</label>';
-
-            function myFunction() {
-                alert("ehlo");
-            };
-
 
             return div;
         };
