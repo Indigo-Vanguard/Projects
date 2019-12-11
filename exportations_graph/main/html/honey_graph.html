@@ -92,12 +92,25 @@ If you want more information, please check their wiki: https://github.com/humang
 
 <body>
 
+
+
 <div class="container-fluid">
+
+
+
     <div class="row-fluid">
         <div id="map"></div>
         <input type="range" min="0" max="2" value="1" class="slider" id="myRange">
     </div>
+
+
+
+
 </div>
+
+
+
+
 
 
 
@@ -110,10 +123,10 @@ If you want more information, please check their wiki: https://github.com/humang
 <script type="text/javascript" src="../../dist/leaflet-dvf.js"></script>
 
 <script type="text/javascript">
-
     var slider = document.getElementById("myRange");
     var years = [1995, 2005, 2017];
     var year = years[slider.value];
+    var flux = "e";
 
     /* Create the map*/
     $(document).ready(function () {
@@ -201,7 +214,7 @@ If you want more information, please check their wiki: https://github.com/humang
         function style(feature) {
 
             return {
-                fillColor: getColor(feature.value[year.toString()]),
+                fillColor: getColor(feature.value[flux+year.toString()]),
                 weight: 2,
                 opacity: 1,
                 dashArray: '3',
@@ -251,20 +264,9 @@ If you want more information, please check their wiki: https://github.com/humang
                 text: key,
                 center: latlng
             };
-//
-            //if (vertex) {
-            // //   var latlng = new L.LatLng(Number(vertex.lat), Number(vertex.lon));
-//
-            //    location = {
-            //        location: latlng,
-            //        text: key,
-            //        center: latlng
-            //    };
-            //}
 
             return location;
         };
-
 
         var maxCount = -1;
         var minCount = 100;
@@ -282,7 +284,6 @@ If you want more information, please check their wiki: https://github.com/humang
         maxCount /= 10;
         minCount;
 
-
         function getArrowColor(d) {
             return d > 10000 ? '#001969' :
                     d > 1000  ? '#364286' :
@@ -290,9 +291,8 @@ If you want more information, please check their wiki: https://github.com/humang
                             d > 10   ? '#789bc1' :
                                 d > 1   ? '#97cce0' :
                                     d > 0   ? '#b7ffff' :
-                                        '#105f40';
+                                        '#FFFFFF';
         }
-
 
         var legend = L.control({position: 'bottomright'});
 
@@ -315,6 +315,56 @@ If you want more information, please check their wiki: https://github.com/humang
         legend.addTo(map);
 
 
+        var control = L.control({position: 'topleft'});
+
+        control.onAdd = function (map) {
+
+
+
+            function test(x){alert(x)};
+
+            var div = L.DomUtil.create('div', 'info legend');
+            div.innerHTML = '<label class="container"><h4>Exportations</h4>\n' +
+                '    <input type="radio" id = "a" checked="checked" name="radio" onchange="test("2")">\n' +
+                '    <span class="checkmark"></span>\n' +
+                '</label>\n' +
+                '<label class="container"><h4>Importations</h4>\n' +
+                '    <input type="radio" id = "b" name="radio">\n' +
+                '    <span class="checkmark"></span>\n' +
+                '</label>';
+
+            function myFunction() {
+                alert("ehlo");
+            };
+
+
+            return div;
+        };
+
+        control.addTo(map);
+
+        document.getElementById("a").addEventListener("click", flux_exp, false);
+        document.getElementById("b").addEventListener("click", flux_imp, false);
+
+        function change_flux(f) {
+            flux = f;
+            allLayer.options.includeLayer = function (newRecord) {
+                console.log(flux)
+                return flux == "e" ? newRecord.from === country_name && newRecord.Year == year : newRecord.to === country_name && newRecord.Year == year;
+            };
+            allLayer.reloadData();
+            country_layer.setStyle(style)
+        }
+
+        function flux_exp() {
+            change_flux("e");
+            console.log(flux)
+            };
+
+        function flux_imp() {
+            change_flux("i");
+            console.log(flux)
+        }
 
         /* Handle the graphical options of the graph */
         var options = {
@@ -378,10 +428,6 @@ If you want more information, please check their wiki: https://github.com/humang
             }
         };
 
-        //LegendControl = new L.Control.Legend();
-
-        //legendControl.addTo(map);
-
         // add the graph to the map
         var allLayer = new L.Graph(exportations, options);
         map.addLayer(allLayer);
@@ -399,21 +445,20 @@ If you want more information, please check their wiki: https://github.com/humang
         slider.oninput = function() {
             year = years[this.value];
             allLayer.options.includeLayer = function (newRecord) {
-                return newRecord.from === country_name && newRecord.Year == year;
+                console.log(flux)
+                return flux == "e" ? newRecord.from === country_name && newRecord.Year == year : newRecord.to === country_name && newRecord.Year == year;
             };
             allLayer.reloadData();
             country_layer.setStyle(style)
         }
 
-
         function links_creation(e) {
             var layer = e.target;
             country_name = layer.feature.properties.name;
             allLayer.options.includeLayer = function (newRecord) {
-                return newRecord.from === country_name && newRecord.Year == year;
+                return flux == "e" ? newRecord.from === country_name && newRecord.Year == year : newRecord.to === country_name && newRecord.Year == year ;
             };
             allLayer.reloadData();
-
 
         }
 
@@ -424,17 +469,6 @@ If you want more information, please check their wiki: https://github.com/humang
                 click : links_creation
             });
         }
-
-
-
-
-
-
-
-
-
-
-
     });
 </script>
 </body>
