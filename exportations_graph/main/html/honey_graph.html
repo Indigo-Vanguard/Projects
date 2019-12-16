@@ -124,7 +124,10 @@ If you want more information, please check their wiki: https://github.com/humang
 </div>
 
 <script type="text/javascript" src="../../dist/js/jquery-1.9.1.min.js"></script>
+
 <script type="text/javascript" src="../../dist/js/leaflet.js"></script>
+<link rel="stylesheet" href="../../dist/leaflet_fullscreen/Control.FullScreen.css" />
+<script src="../../dist/leaflet_fullscreen/Control.FullScreen.js"></script>
 <script src="../../dist/js/leaflet.markercluster.js"></script>
 <script type="text/javascript" src="../../dist/js/tile.stamen.js"></script>
 <script type="text/javascript" src="../data/countries.js"></script>
@@ -163,7 +166,12 @@ If you want more information, please check their wiki: https://github.com/humang
         /* Initialize the map by setting the map origin on the NAL*/
         map = L.map('map', {
             minZoom: 2, maxBounds: bounds, maxZoom: 8
-        }).setView([46.518516, 6.561727], 4);
+        }
+        ).setView([46.518516, 6.561727], 4);
+
+        var fsControl = L.control.fullscreen();
+        // add fullscreen control to the map
+        map.addControl(fsControl);
 
 
 
@@ -207,8 +215,7 @@ If you want more information, please check their wiki: https://github.com/humang
 
         legend1.update = function () {
             var grades = [0, 1, 10, 100, 1000, 10000, 100000];
-            console.log((flux == "e" ? "Exportation" : "Importation"));
-            this.div.innerHTML = '<center><h4>'+(flux == "e" ? "Exportation" : "Importation")+'<br>of honey<br> in tonnes</h4></center>';
+            this.div.innerHTML = '<center><h4>'+(flux == "e" ? "Exportation" : "Importation")+'<br>of honey<br>by country<br> in tonnes</h4></center>';
             // loop through our density intervals and generate a label with a colored square for each interval
             for (var i = 0; i < grades.length; i++) {
                 this.div.innerHTML +=
@@ -294,11 +301,11 @@ If you want more information, please check their wiki: https://github.com/humang
 
         function getArrowColor(d) {
             return d > 10000 ? '#001969' :
-                    d > 1000  ? '#364286' :
-                        d > 100  ? '#586da3' :
-                            d > 10   ? '#789bc1' :
-                                d > 1   ? '#97cce0' :
-                                    d > 0   ? '#b7ffff' :
+                    d > 5000  ? '#364286' :
+                        d > 2000  ? '#586da3' :
+                            d > 1000   ? '#789bc1' :
+                                d > 500   ? '#97cce0' :
+                                    d > 100   ? '#b7ffff' :
                                         '#FFFFFF';
         }
 
@@ -311,9 +318,8 @@ If you want more information, please check their wiki: https://github.com/humang
         };
 
         legend2.update = function () {
-            var grades = [0, 1, 10, 100, 1000, 10000];
-            console.log((flux == "e" ? "Exportation" : "Importation"));
-            this.div.innerHTML = '<center><h4>'+(flux == "e" ? "Exportation" : "Importation")+'<br>of honey<br> in tonnes</h4></center>';
+            var grades = [100, 500, 1000, 2000, 5000, 10000];
+            this.div.innerHTML = '<center><h4>'+(flux == "e" ? "Exportation" : "Importation")+'<br>of honey<br>between countries<br>  in tonnes</h4></center>';
             // loop through our density intervals and generate a label with a colored square for each interval
             for (var i = 0; i < grades.length; i++) {
                 this.div.innerHTML +=
@@ -351,8 +357,7 @@ If you want more information, please check their wiki: https://github.com/humang
         function change_flux(f) {
             flux = f;
             allLayer.options.includeLayer = function (newRecord) {
-                console.log(flux)
-                return flux == "e" ? newRecord.from === country_name && newRecord.Year == year : newRecord.to === country_name && newRecord.Year == year;
+                return flux == "e" ? newRecord.from === country_name && newRecord.Year == year && newRecord.Value > 100: newRecord.to === country_name && newRecord.Year == year  && newRecord.Value > 100;
             };
             legend1.update();
             legend2.update();
@@ -384,7 +389,7 @@ If you want more information, please check their wiki: https://github.com/humang
                 return false;
             },
             getIndexKey: function (location, record) {
-                return record.from + '_' + record.to;
+                return record.from + '_' + record.to + '_' + record.Year;
             },
             // The link is green when the mouse is over.
             setHighlight: function (style) {
@@ -451,7 +456,7 @@ If you want more information, please check their wiki: https://github.com/humang
             year = years[this.value];
             allLayer.options.includeLayer = function (newRecord) {
                 console.log(flux)
-                return flux == "e" ? newRecord.from === country_name && newRecord.Year == year : newRecord.to === country_name && newRecord.Year == year;
+                return flux == "e" ? newRecord.from === country_name && newRecord.Year == year && newRecord.Value > 100 : newRecord.to === country_name && newRecord.Year == year && newRecord.Value > 100;
             };
             allLayer.reloadData();
             country_layer.setStyle(style)
@@ -461,7 +466,7 @@ If you want more information, please check their wiki: https://github.com/humang
             var layer = e.target;
             country_name = layer.feature.properties.name;
             allLayer.options.includeLayer = function (newRecord) {
-                return flux == "e" ? newRecord.from === country_name && newRecord.Year == year : newRecord.to === country_name && newRecord.Year == year ;
+                return flux == "e" ? newRecord.from === country_name && newRecord.Year == year && newRecord.Value > 100 : newRecord.to === country_name && newRecord.Year == year && newRecord.Value > 100;
             };
             allLayer.reloadData();
 

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5db41abf-f42c-4e0b-a8e2-7e152d28d6e1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../bees-Scatterplot.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../bees-Scatterplot.ipynb" afterDir="false" />
-    </list>
+    <list default="true" id="5db41abf-f42c-4e0b-a8e2-7e152d28d6e1" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,11 +37,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dist" />
       <recent name="$PROJECT_DIR$/dist/js" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/dist/css" />
       <recent name="$PROJECT_DIR$/images" />
-      <recent name="$PROJECT_DIR$/main/html" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.website.html">
@@ -60,7 +58,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.website.html" />
-        <item itemvalue="Node.js.MarkerCluster.js" />
       </list>
     </recent_temporary>
   </component>
@@ -110,7 +107,9 @@
       <workItem from="1573983232100" duration="1686000" />
       <workItem from="1575719598767" duration="7329000" />
       <workItem from="1575894546133" duration="6318000" />
-      <workItem from="1576081271415" duration="2550000" />
+      <workItem from="1576081271415" duration="2834000" />
+      <workItem from="1576158987379" duration="19000" />
+      <workItem from="1576493813128" duration="4971000" />
     </task>
     <servers />
   </component>
@@ -125,5 +124,24 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="473" y="195" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576504733902">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="473" y="195" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877@0.23.1440.877" timestamp="1576504733901" />
   </component>
 </project>
