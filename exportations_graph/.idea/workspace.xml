@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5db41abf-f42c-4e0b-a8e2-7e152d28d6e1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../bees-Scatterplot.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../bees-Scatterplot.ipynb" afterDir="false" />
-    </list>
+    <list default="true" id="5db41abf-f42c-4e0b-a8e2-7e152d28d6e1" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,7 +109,7 @@
       <workItem from="1575894546133" duration="6318000" />
       <workItem from="1576081271415" duration="2834000" />
       <workItem from="1576158987379" duration="19000" />
-      <workItem from="1576493813128" duration="4598000" />
+      <workItem from="1576493813128" duration="4971000" />
     </task>
     <servers />
   </component>
@@ -139,5 +137,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="473" y="195" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576504733902">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="473" y="195" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877@0.23.1440.877" timestamp="1576504733901" />
   </component>
 </project>
