@@ -1,7 +1,10 @@
 # There is no plan Bee without them 🐝
+
 #### Disclaimer
 
-For Milestone 2, please consider consulting the file called [`bees.html`](bees.html) in order to see our entire work without having to run the notebook `bees.ipynb`
+Please consider consulting the file called [`bees.html`](bees.html) in order to see our entire work without having to run the notebook `bees.ipynb`.
+
+[Our data story can be found here](https://indigo-vanguard.github.io/).
 
 ## Abstract
 
