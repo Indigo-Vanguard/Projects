@@ -17,12 +17,12 @@ If you want more information, please check their wiki: https://github.com/humang
 
         /* Add Background pattern on the map */
         #map {
-            background-image: url('../data/background_img.png');
+            background: white;
         }
 
         /* Give opacity to the background pattern (in order to see the pattern and the map) */
         #map div.leaflet-tile-pane {
-            opacity: 0.4;
+            opacity: 0;
         }
 
         div.leaflet-control-legend {
@@ -103,14 +103,14 @@ If you want more information, please check their wiki: https://github.com/humang
 
         <h2 id="" name="left"
             rows="5" cols="33" class = "yearstext">
-        1995
+        1997
         </h2>
 
         </h2>
 
         <h2 id="center" name="story" align="center"
             rows="5" cols="33" class = "yearstext">
-            2005
+            2007
         </h2>
 
         <h2 id="story" name="right" align="right"
@@ -136,9 +136,10 @@ If you want more information, please check their wiki: https://github.com/humang
 
 <script type="text/javascript">
     var slider = document.getElementById("myRange");
-    var years = [1995, 2005, 2017];
+    var years = [1997, 2007, 2017];
     var year = years[slider.value];
     var flux = "e";
+    var country_name = "France";
 
     /* Create the map*/
     $(document).ready(function () {
@@ -185,8 +186,8 @@ If you want more information, please check their wiki: https://github.com/humang
 
 // method that we will use to update the control based on feature properties passed
         info.update = function (props, value) {
-            this._div.innerHTML = '<h4>'+ (flux == "e" ? "Exportation" : "Importation") +' of honey</h4>' +  (props ?
-                '<b>' + props.name + '</b><br />' + value[flux+year.toString()] + ' tonnes'
+            this._div.innerHTML = '<h4>'+ (flux == "e" ? "Exports" : "Imports") +' of honey</h4>' +  (props ?
+                '<b>' + props.name + '</b><br />' + (value[flux+year.toString()] ? value[flux+year.toString()] + ' tonnes': "No "+ (flux == "e" ? "exports" : "imports") +" in "+ year.toString())
                 : 'Hover over a country');
         };
 
@@ -194,14 +195,14 @@ If you want more information, please check their wiki: https://github.com/humang
 
 
         function getColor(d) {
-            return d > 100000 ? '#800026' :
-                d > 10000 ? '#BD0026' :
-                    d > 1000  ? '#E31A1C' :
-                        d > 100  ? '#FC4E2A' :
-                            d > 10   ? '#FD8D3C' :
-                                d > 1   ? '#FEB24C' :
-                                    d > 0   ? '#FED976' :
-                                        '#999999';
+            return d > 100000 ? '#990000' :
+                d > 50000 ? '#d7301f' :
+                    d > 20000  ? '#ef6548' :
+                        d > 10000  ? '#fc8d59' :
+                            d > 5000   ? '#fdbb84' :
+                                d > 1000   ? '#fdd49e' :
+                                    d > 0   ? '#fef0d9' :
+                                        '#DCDCDC';
         }
 
 
@@ -214,8 +215,8 @@ If you want more information, please check their wiki: https://github.com/humang
         };
 
         legend1.update = function () {
-            var grades = [0, 1, 10, 100, 1000, 10000, 100000];
-            this.div.innerHTML = '<center><h4>'+(flux == "e" ? "Exportation" : "Importation")+'<br>of honey<br>by country<br> in tonnes</h4></center>';
+            var grades = [0, 1000, 5000, 10000, 20000, 50000, 100000];
+            this.div.innerHTML = '<center><h4>'+(flux == "e" ? "Exports" : "Imports")+'<br>of honey<br>by country<br> in tonnes</h4></center>';
             // loop through our density intervals and generate a label with a colored square for each interval
             for (var i = 0; i < grades.length; i++) {
                 this.div.innerHTML +=
@@ -230,9 +231,10 @@ If you want more information, please check their wiki: https://github.com/humang
 
             return {
                 fillColor: getColor(feature.value[flux+year.toString()]),
-                weight: 2,
+                weight: 1,
                 opacity: 1,
-                dashArray: '3',
+                color: 'black',
+                //dashArray: '3',
                 fillOpacity: 0.7
             };
         }
@@ -300,12 +302,12 @@ If you want more information, please check their wiki: https://github.com/humang
         minCount;
 
         function getArrowColor(d) {
-            return d > 10000 ? '#001969' :
-                    d > 5000  ? '#364286' :
-                        d > 2000  ? '#586da3' :
-                            d > 1000   ? '#789bc1' :
-                                d > 500   ? '#97cce0' :
-                                    d > 100   ? '#b7ffff' :
+            return d > 10000 ? '#BF08FF' :
+                    d > 5000  ? '#7208FF' :
+                        d > 2000  ? '#2F00EB' :
+                            d > 1000   ? '#011DFF' :
+                                d > 500   ? '#0C60E8' :
+                                    d > 100   ? '#05A8FF' :
                                         '#FFFFFF';
         }
 
@@ -319,7 +321,7 @@ If you want more information, please check their wiki: https://github.com/humang
 
         legend2.update = function () {
             var grades = [100, 500, 1000, 2000, 5000, 10000];
-            this.div.innerHTML = '<center><h4>'+(flux == "e" ? "Exportation" : "Importation")+'<br>of honey<br>between countries<br>  in tonnes</h4></center>';
+            this.div.innerHTML = '<center><h4>'+(flux == "e" ? "Exports" : "Imports")+'<br>of honey<br>between countries<br>  in tonnes</h4></center>';
             // loop through our density intervals and generate a label with a colored square for each interval
             for (var i = 0; i < grades.length; i++) {
                 this.div.innerHTML +=
@@ -337,11 +339,11 @@ If you want more information, please check their wiki: https://github.com/humang
             function test(x){alert(x)};
 
             var div = L.DomUtil.create('div', 'info legend');
-            div.innerHTML = '<label class="container"><h4>Exportations</h4>\n' +
+            div.innerHTML = '<label class="container"><h4>Exports</h4>\n' +
                 '    <input type="radio" id = "a" checked="checked" name="radio" onchange="test("2")">\n' +
                 '    <span class="checkmark"></span>\n' +
                 '</label>\n' +
-                '<label class="container"><h4>Importations</h4>\n' +
+                '<label class="container"><h4>Imports</h4>\n' +
                 '    <input type="radio" id = "b" name="radio">\n' +
                 '    <span class="checkmark"></span>\n' +
                 '</label>';
@@ -365,6 +367,8 @@ If you want more information, please check their wiki: https://github.com/humang
             allLayer.reloadData();
             country_layer.setStyle(style)
         }
+
+
 
         function flux_exp() {
             change_flux("e");
@@ -431,7 +435,7 @@ If you want more information, please check their wiki: https://github.com/humang
                 "Value" : {
                     weight: 3,
                     color: getArrowColor,
-                displayName: 'Exportations in tonnes (for arrows):'
+                displayName: 'Exports in tonnes (for arrows):'
             }},
             onEachRecord: function (layer, record) {
                 layer.bindPopup($(L.HTMLUtils.buildTable(record)).wrap('<div/>').parent().html());
@@ -449,7 +453,7 @@ If you want more information, please check their wiki: https://github.com/humang
         country_layer.addTo(map);
 
 
-        var country_name = null;
+        change_flux("e")
 
 
         slider.oninput = function() {
